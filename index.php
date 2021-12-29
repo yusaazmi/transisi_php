@@ -111,5 +111,41 @@ echo "<br>";
 echo "<h3>PHP Dasar (2)</h3>";
 echo "<br>";
 echo encryption("DFHKNQ");
+echo "<br>";
+
+$arr = array(
+    array('f','g','h','i'),
+    array('j','k','p','q'),
+    array('r','s','t','u')
+);
+function cari($arr,$search){
+    $new_array = str_split($search);
+    if($arr[0] == $new_array){
+        return true;
+    }
+    elseif($new_array[3] == $arr[1][2]){
+        $x = 0;
+        for($i=0;$i<3;$i++)
+        {
+            if($arr[0][$i] == $new_array[$i])
+            {
+                $x++;
+            }
+        }
+        if($x == 3){
+            return true;
+        }
+    }
+    return null;
+}
+echo cari($arr,'fghp');
+// fghi
+// fghp
+// fjrstp
+
+// fghq
+// fst
+// pqr
+// fghh
 
 ?>
