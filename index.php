@@ -130,15 +130,19 @@ function cari($arr,$search){
             if($arr[0][$i] == $new_array[$i])
             {
                 $x++;
+                if($x == 3){
+                    return true;
+                }
             }
-        }
-        if($x == 3){
-            return true;
         }
     }
     return null;
 }
+echo cari($arr,'fghi');
+echo "<br>";
 echo cari($arr,'fghp');
+echo "<br>";
+echo cari($arr,'fjrstp');
 // fghi
 // fghp
 // fjrstp
